@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+     
+    
+</head>
+<body>
+    <div class="margem2" class="container">
+        <center>
+        <form id="dataForm">
+            <p>
+                NOME:<input type="text" name="nome_usuario" placeholder="" required>
+                DATA:<input type="text" id="currentDateTime" name="data_completa" readonly>
+
+
+                <!--<input type="date" id="currentDate" name="Data" required>-->
+            </p>
+
+            </center>
+            <center><strong>ANÁLISE SENSORIAL – SHELF LIFE</strong></center>
+            <p>Avalie cada uma das amostras <strong>comparando-as ao produto contole</strong>, indique o grau de diferença entre elas deslizando a barra de rolagem.</p>
+            <table >
+                <tr><th class="alinhadoEsquerda"><strong>0   – Igual ao controle</strong></tr></th>
+                <tr><th class="alinhadoEsquerda"><strong>2,5 – Levemente diferente do controle</strong></th></tr>
+                <tr><th class="alinhadoEsquerda"><strong>5,0 – Moderadamente diferente do controle</strong></th></tr>
+                <tr><th class="alinhadoEsquerda"><strong>7,5 – Muito diferente do controle</strong></th></tr>
+                <tr><th class="alinhadoEsquerda"><strong>10  – Extremamente diferente do controle</strong></th></tr>
+            </table>
+
+            <center>
+   
+            <strong>Código da Amostra:</strong><input type="text" name="nome_cod_amostra" placeholder="" required>
+
+            </center>
+            <hr>
+            <table>
+                <tr>
+                    <td><strong>APARÊNCIA</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="aparencia1" min="0" max="10" step="0.1" id="rangeInput1">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput1">-->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>ODOR</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="odor1" min="0" max="10" step="0.1" id="rangeInput2">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput2">-->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>SABOR</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="sabor1" min="0" max="10" step="0.1" id="rangeInput3">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput3">-->
+                        </div>
+                    </td>    
+                </tr>
+                <tr>
+                    <td><strong>TEXTURA</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="textura1" min="0" max="10" step="0.1" id="rangeInput4">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput4">-->
+                        </div>
+                    </td>
+                </tr>
+        </table>
+        <hr>
+        <center>
+            <strong>Código da Amostra:</strong><input type="text" name="nome_cod_amostra2" placeholder="" required>
+        </center>
+        <hr>
+            <table>
+                <tr>
+                    <td><strong>APARÊNCIA</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="aparencia2" min="0" max="10" step="0.1" id="rangeInput5">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput5">-->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>ODOR</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="odor2" min="0" max="10" step="0.1" id="rangeInput6">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput6">-->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>SABOR</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="sabor2" min="0" max="10" step="0.1" id="rangeInput7">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput7">-->
+                        </div>
+                    </td>    
+                </tr>
+                <tr>
+                    <td><strong>TEXTURA</strong></td>
+                    <td>
+                        <div class="ruler-container">
+                            <div class="ruler">
+                                <div class="ticks">
+                                    <!-- Gera as marcas da régua de 0 a 10 com incremento de 0.1 -->
+                                    <div class="tick" style="left: 0%;">0</div>
+                                    <div class="tick" style="left: 25%;">2.5</div>
+                                    <div class="tick" style="left: 50%;">5.0</div>
+                                    <div class="tick" style="left: 75%;">7.5</div>
+                                    <div class="tick" style="left: 100%;">10</div>
+                                </div>
+                            </div>
+                            <input type="range" name="textura2" min="0" max="10" step="0.1" id="rangeInput8">
+                            <!--<input type="range" min="0" max="10" step="0.1" id="rangeInput8">-->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        <hr>
+        <p>
+            Se você percebeu alguma alteração nas amostras apresentadas, descreva-a abaixo. Não esqueça de identificar a amostra!
+        </p>
+            <br>
+                <br>
+                
+                    <label for="rangeAparencia"><strong>APARÊNCIA: </strong></label>
+                    <!--<input type="text" id="aparencia3" name="aparencia3" placeholder="">-->
+                    <input type="text" name="Aparencia4" placeholder="">
+                    
+                
+                    <br><br>
+                    <strong>ODOR: </strong><input type="text" name="Odor" placeholder=""><br><br>
+                    <strong>SABOR: </strong><input type="text" name="Sabor" placeholder=""><br><br>
+                    <strong>TEXTURA: </strong><input type="text" name="Textura" placeholder="">
+                
+            <br><br>
+            <button type="submit" >Salvar arquivo</button>
+        </form>
+        <script src="./script.js"></script>
+    </div>
+</body>
+</html>
