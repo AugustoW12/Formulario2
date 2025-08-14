@@ -62,7 +62,11 @@ function handleSubmit(event) {
         }
     });
     
-    console.log(data);
+    // console.log(data);
+    console.log(typeof data.sabor1, data.sabor1); // Deve mostrar "string" e o valor
+console.log(typeof data.textura1, data.textura1);
+console.log(typeof data.sabor2, data.sabor2);
+console.log(typeof data.textura2, data.textura2);
 
     fetch('https://api.sheetmonkey.io/form/kyTJqgwZp2k1Af4KJ191iZ', {
         method: 'POST',
@@ -74,4 +78,5 @@ function handleSubmit(event) {
     })
     
 }
+
 
