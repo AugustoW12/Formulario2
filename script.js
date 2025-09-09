@@ -15,65 +15,58 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('currentDateTime').value = getCurrentDateTime();
 });
 
-let firstClick = true;
 
 
-// Adiciona um evento de clique ao botão para mostrar um alerta
-document.querySelector('button[type="submit"]').addEventListener('click', function() {
-    alert('Sua resposta foi registrada :)');
-    setTimeout(function() {
-        location.reload(); // ou use window.location.href = 'URL' para redirecionar
-    }, 5000); // 5000 ms = 5 segundos
-});
-
-  
-document.getElementById('currentDateTime').value = getCurrentDateTime();
-const data = {};
-const form = document.getElementById('dataForm');
-form.addEventListener('submit', handleSubmit);
 
 
-function handleSubmit(event) {
-    event.preventDefault();
+document.getElementById('dataForm').addEventListener('submit', function(event) { //document.addEventListener('DOMContentLoaded', function() {
+    event.preventDefault(); // Evita o comportamento padrão do formulário
 
-    // Coleta os dados do formulário
-    const formData = new FormData(event.target);
-    
-    // Lista dos campos tipo range
-    const rangeFields = [
-        'aparencia1', 'odor1', 'sabor1', 'textura1',
-        'aparencia2', 'odor2', 'sabor2', 'textura2'
-    ];
-    
-    // Transforma os dados em um objeto para facilitar a manipulação
+    document.getElementById('currentDateTime').value = getCurrentDateTime();
+    const data = {};
+    const form = document.getElementById('dataForm');
+    form.addEventListener('submit', handleSubmit);
+
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        // Coleta os dados do formulário
+        const formData = new FormData(event.target);
+
+
+
+
+  // Transforma os dados em um objeto para facilitar a manipulação
     let data = {};
-    
-    rangeFields.forEach(field => {
-        data[field] = 0;
-    });
-    
     formData.forEach((value, key) => {
         // Converte os valores dos inputs de faixa para números flutuantes
-        if (rangeFields.includes(key)) {
-            // Envia sempre como sring, inclusive 0
-            data[key] = value === "" ? "0" : value.toString();
+        if (key.startsWith('aparencia') || key.startsWith('odor') || key.startsWith('sabor') || key.startsWith('textura')) {
+            data[key] = parseFloat(value);
         } else {
             data[key] = value;
         }
     });
-    
-    // console.log(data);
 
-    fetch('https://api.sheetmonkey.io/form/kyTJqgwZp2k1Af4KJ191iZ', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
 
-    })
-    
-}
+    // Adiciona um evento de clique ao botão para mostrar um alerta
+    document.querySelector('button[type="submit"]').addEventListener('click', function() {
+        alert('Sua resposta foi registrada :)');
+    });
 
+
+
+
+        fetch('https://api.sheetmonkey.io/form/kyTJqgwZp2k1Af4KJ191iZ', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+
+        })
+        
+    }
+});
 
 
