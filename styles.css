@@ -23,6 +23,12 @@ th{
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 32px; /* Espaçamento à esquerda */
+    padding-right: 32px; /* Espaçamento à direita */
+    padding-bottom: 32px; /* Espaçamento abaixo */
+    padding-top: 32px; /* Espaçamento acima */
+    background-color: #f0f0f0;
+
 }
 
 
@@ -52,7 +58,7 @@ button[type="submit"]{
 
 input[type="text"]{
     width: 350px;
-    height: 30px;
+    /* height: 30px; */
 }
 
 input[type="date"]{
@@ -97,6 +103,12 @@ textarea{
     width:150%;
     margin-top: 10px;
 }
+
+/* Para a classe input-group mb-3 */
+.input-group.mb-3 {
+    width: 350px;
+}
+
 
 .ruler-container {
     position: relative;
