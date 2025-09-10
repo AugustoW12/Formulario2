@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelf Life</title>
     <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
      
     
 </head>
@@ -13,27 +14,27 @@
         <center>
         <form id="dataForm">
             <p>
-                NOME:<br><input type="text" name="nome_usuario" placeholder="" required>
-                <br>DATA:<br><input type="text" id="currentDateTime" name="data_completa" readonly>
+                NOME:<br><input type="text" name="nome_usuario" class="form-control" placeholder="" required>
+                <br>DATA:<br><input type="text" id="currentDateTime" name="data_completa" class="form-control" readonly>
 
 
                 <!--<input type="date" id="currentDate" name="Data" required>-->
             </p>
 
             </center>
-            <center><strong>ANÁLISE SENSORIAL – SHELF LIFE</strong></center>
+            <center><strong>ANÁLISE SENSORIAL - SHELF LIFE</strong></center>
             <p>Avalie cada uma das amostras <strong>comparando-as ao produto controle</strong>, indique o grau de diferença entre elas deslizando a barra de rolagem.</p>
             <table >
-                <tr><th class="alinhadoEsquerda"><strong>0   – Igual ao controle</strong></tr></th>
-                <tr><th class="alinhadoEsquerda"><strong>2,5 – Levemente diferente do controle</strong></th></tr>
-                <tr><th class="alinhadoEsquerda"><strong>5,0 – Moderadamente diferente do controle</strong></th></tr>
-                <tr><th class="alinhadoEsquerda"><strong>7,5 – Muito diferente do controle</strong></th></tr>
-                <tr><th class="alinhadoEsquerda"><strong>10  – Extremamente diferente do controle</strong></th></tr>
+                <tr><th class="alinhadoEsquerda"><strong>0    Igual ao controle</strong></tr></th>
+                <tr><th class="alinhadoEsquerda"><strong>2,5  Levemente diferente do controle</strong></th></tr>
+                <tr><th class="alinhadoEsquerda"><strong>5,0  Moderadamente diferente do controle</strong></th></tr>
+                <tr><th class="alinhadoEsquerda"><strong>7,5  Muito diferente do controle</strong></th></tr>
+                <tr><th class="alinhadoEsquerda"><strong>10   Extremamente diferente do controle</strong></th></tr>
             </table>
 
             <center>
    
-            <strong>Código da Amostra:</strong><input type="text" name="nome_cod_amostra" placeholder="" required>
+            <strong>Código da Amostra:</strong><input type="text" name="nome_cod_amostra" class="form-control" placeholder="" required>
 
             </center>
             <hr>
@@ -117,7 +118,7 @@
         </table>
         <hr>
         <center>
-            <strong>Código da Amostra:</strong><input type="text" name="nome_cod_amostra2" placeholder="">
+            <strong>Código da Amostra:</strong><input type="text" name="nome_cod_amostra2" class="form-control" placeholder="">
         </center>
         <hr>
             <table>
@@ -204,16 +205,29 @@
             Se você percebeu alguma alteração nas amostras apresentadas, descreva-a abaixo. Não esqueça de identificar a amostra!
         </p>
             <br>
-                <br>
-                    <strong>APARÊNCIA: </strong><input type="text" name="Aparencia4" placeholder=""><br><br>
-                    <strong>ODOR: </strong><input type="text" name="Odor" placeholder=""><br><br>
-                    <strong>SABOR: </strong><input type="text" name="Sabor" placeholder=""><br><br>
-                    <strong>TEXTURA: </strong><input type="text" name="Textura" placeholder="">
                 
-            <br><br>
-            <button type="submit" id="sabeButton" >Salvar arquivo</button>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">APARÊNCIA</span>
+                        <input type="text" name="Aparencia4" placeholder="" class="form-control" id="aparencia01" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">ODOR</span>
+                        <input type="text" name="Odor" placeholder="" class="form-control" id="odor01" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">SABOR</span>
+                        <input type="text" name="Sabor" placeholder="" class="form-control" id="sabor01" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">TEXTURA</span>
+                        <input type="text" name="Textura" placeholder="" class="form-control" id="textura01" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                
+            
+            <button type="submit" id="sabeButton" class="btn btn-success" >Salvar arquivo</button>
         </form>
         <script src="./script.js"></script>
+        
     </div>
 </body>
 </html>
